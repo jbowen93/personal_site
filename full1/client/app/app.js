@@ -8,8 +8,7 @@ angular.module('testApp', [
   'ui.bootstrap'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
-    $urlRouterProvider
-      .otherwise('/');
+    $urlRouterProvider.otherwise('/');
 
     $locationProvider.html5Mode(true);
   });

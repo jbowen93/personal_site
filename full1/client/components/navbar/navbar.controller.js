@@ -1,15 +1,27 @@
+/// <reference path="../../../typings/angularjs/angular.d.ts"/>
 'use strict';
 
-angular.module('testApp')
-  .controller('NavbarCtrl', function ($scope, $location) {
-    $scope.menu = [{
-      'title': 'Home',
-      'link': '/'
-    }];
+var app = angular.module('testApp')
 
-    $scope.isCollapsed = true;
+app.controller('NavbarCtrl', function ($scope, $location) {
+  $scope.menu = [
+    {
+    'title': 'Home',
+    'link': '/'
+    },
+    {
+    'title': 'About',
+    'link': '/about'
+    },
+    {
+    'title': 'Contact',
+    'link': '/contact'
+    }
+    ];
 
-    $scope.isActive = function(route) {
-      return route === $location.path();
-    };
-  });
+  $scope.isCollapsed = true;
+
+  $scope.isActive = function(route) {
+    return route === $location.path();
+  };
+});
