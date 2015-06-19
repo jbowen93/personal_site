@@ -1,7 +1,7 @@
 /// <reference path="../../../typings/angularjs/angular.d.ts"/>
 'use strict';
 
-var app = angular.module('testApp')
+var app = angular.module('testApp');
 
 app.controller('NavbarCtrl', function ($scope, $location) {
   $scope.menu = [
